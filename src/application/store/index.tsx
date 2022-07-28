@@ -1,6 +1,5 @@
 import { createContext, useContext, useState } from "react";
 import { StoreInterface } from "../types/store.type";
-import { ToDoItem } from "../types/todo.type";
 import { defaultToDoContext, useToDo } from "./todo";
 
 interface ProviderProps {
