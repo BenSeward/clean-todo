@@ -3,7 +3,7 @@ import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import { ToDoList } from "../presentation/ToDoList";
 
-const Home: NextPage = () => {
+function Home(): JSX.Element {
   return (
     <div className={styles.container}>
       <Head>
@@ -21,6 +21,6 @@ const Home: NextPage = () => {
       </main>
     </div>
   );
-};
+}
 
 export default Home;

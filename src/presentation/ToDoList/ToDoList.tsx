@@ -1,6 +1,6 @@
 import React from "react";
 import { useApplicationContext } from "../../application/store";
-import ToDoListItem from "./ToDoListItem";
+import { ToDoListItem } from "./ToDoListItem";
 
 export function ToDoList() {
   const { toDoItems } = useApplicationContext();

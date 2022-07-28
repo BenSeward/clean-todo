@@ -12,7 +12,7 @@ const defaultContext: StoreInterface = {
 
 const Context = createContext<StoreInterface>(defaultContext);
 
-export const ApplicationContextProvider = ({ children }: ProviderProps) => {
+export function ApplicationContextProvider({ children }: ProviderProps) {
   const [toDoItems, setToDoItems] = useToDo();
 
   const values = {
@@ -21,6 +21,8 @@ export const ApplicationContextProvider = ({ children }: ProviderProps) => {
   };
 
   return <Context.Provider value={values as any}>{children}</Context.Provider>;
-};
+}
 
-export const useApplicationContext = () => useContext(Context);
+export function useApplicationContext() {
+  return useContext(Context);
+}

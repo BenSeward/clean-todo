@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 
-const NotFoundPage: NextPage = () => {
+function NotFoundPage(): JSX.Element {
   return (
     <div className={styles.container}>
       <Head>
@@ -30,6 +30,6 @@ const NotFoundPage: NextPage = () => {
       </footer>
     </div>
   );
-};
+}
 
 export default NotFoundPage;
