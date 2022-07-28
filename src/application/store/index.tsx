@@ -1,25 +1,20 @@
 import { createContext, useContext, useState } from "react";
 import { StoreInterface } from "../types/store.type";
 import { ToDoItem } from "../types/todo.type";
+import { defaultToDoContext, useToDo } from "./todo";
 
 interface ProviderProps {
   children: JSX.Element | JSX.Element[];
 }
 
 const defaultContext: StoreInterface = {
-  toDoItems: [
-    {
-      id: 0,
-      label: "This is a to do item",
-    },
-  ],
-  setToDoItems: () => {},
+  ...defaultToDoContext,
 };
 
 const Context = createContext<StoreInterface>(defaultContext);
 
 export const ApplicationContextProvider = ({ children }: ProviderProps) => {
-  const [toDoItems, setToDoItems] = useState(defaultContext.toDoItems);
+  const [toDoItems, setToDoItems] = useToDo();
 
   const values = {
     toDoItems,
