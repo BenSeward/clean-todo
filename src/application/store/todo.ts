@@ -4,7 +4,7 @@ export const defaultToDoContext = {
   toDoItems: [
     {
       id: 0,
-      label: "This is a to do itemsss",
+      label: "This is a to do item",
     },
   ],
   setToDoItems: () => {},
