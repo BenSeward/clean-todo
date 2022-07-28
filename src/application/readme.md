@@ -4,6 +4,7 @@ The application layer is responsible for applying business logic inside the app,
 
 ```
 ├── /application
+   ├── /services
    ├── /store
    ├── /types
 ```
