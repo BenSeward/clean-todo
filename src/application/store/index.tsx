@@ -23,6 +23,4 @@ export function ApplicationContextProvider({ children }: ProviderProps) {
   return <Context.Provider value={values as any}>{children}</Context.Provider>;
 }
 
-export function useApplicationContext() {
-  return useContext(Context);
-}
+export const useApplicationContext = () => useContext(Context);

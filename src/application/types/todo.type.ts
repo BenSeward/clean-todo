@@ -1,4 +1,4 @@
 export type ToDoItem = {
-  id: number;
+  id: string;
   label: string;
 };
