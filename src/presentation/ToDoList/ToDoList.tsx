@@ -1,15 +1,13 @@
 import React from "react";
-import { useToDoListStorage } from "../../application/store/todo";
+import { useToDoList } from "../../application/services/todo/useToDoList";
 import { ToDoListItem } from "./ToDoListItem";
 
 export function ToDoList() {
-  const context = useToDoListStorage();
-
-  if (!context || !context.toDoItems) return null;
+  const { getToDoItems } = useToDoList();
 
   return (
     <div>
-      {context.toDoItems.map((item, index) => (
+      {getToDoItems.map((item, index) => (
         <ToDoListItem key={index} id={item.id} label={item.label} />
       ))}
     </div>
