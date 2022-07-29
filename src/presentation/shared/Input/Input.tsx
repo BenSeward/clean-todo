@@ -6,14 +6,15 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   value: string;
 }
 
-export function Input({ id, value, onChange, ...rest }: Props) {
+export function Input({ id, value, onChange, disabled, ...rest }: Props) {
   return (
     <input
       id={id}
-      className={styles.input}
+      className={`${styles.input} ${disabled && styles.completed}`}
       type={"text"}
       value={value}
       onChange={onChange}
+      disabled={disabled}
       {...rest}
     />
   );
