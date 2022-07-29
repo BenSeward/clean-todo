@@ -12,10 +12,15 @@ export function useToDoList() {
   }
 
   function createToDoItem() {
-    console.log("create a new item");
+    const newItem = {
+      id: Math.random().toString(),
+      label: "another label",
+    };
+
+    storage.setToDoItems([...storage.toDoItems, newItem]);
   }
 
   const getToDoItems = storage?.toDoItems || [];
 
-  return { retreiveInitialToDoItems, getToDoItems };
+  return { retreiveInitialToDoItems, getToDoItems, createToDoItem };
 }
