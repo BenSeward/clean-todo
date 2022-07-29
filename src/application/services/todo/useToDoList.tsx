@@ -11,5 +11,11 @@ export function useToDoList() {
     return formattedItems;
   }
 
-  return { retreiveInitialToDoItems };
+  function createToDoItem() {
+    console.log("create a new item");
+  }
+
+  const getToDoItems = storage?.toDoItems || [];
+
+  return { retreiveInitialToDoItems, getToDoItems };
 }
