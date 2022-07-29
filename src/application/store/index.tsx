@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useToDoList } from "../services/todo/readToDoItems";
-import { useToDoListStorage } from "./todo";
 
 interface ProviderProps {
   children: JSX.Element | JSX.Element[];

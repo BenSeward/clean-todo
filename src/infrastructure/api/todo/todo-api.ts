@@ -1,4 +1,3 @@
-import { ToDoItem } from "../../../application/types/todo.type";
 import { ToDoAPIInterface } from "./todo-api.dto";
 
 export async function fetchToDoItems(): Promise<ToDoAPIInterface> {
