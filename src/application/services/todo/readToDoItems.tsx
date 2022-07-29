@@ -1,5 +1,15 @@
 import { formattedToDoItems } from "../../../infrastructure/api/todo/todo-api";
+import { useToDoListStorage } from "../../store/todo";
 
-export async function readToDoItems() {
-  return await formattedToDoItems();
+export function useToDoList() {
+  const storage = useToDoListStorage();
+
+  async function retreiveInitialToDoItems() {
+    if (storage) return;
+
+    const formattedItems = await formattedToDoItems();
+    return formattedItems;
+  }
+
+  return { retreiveInitialToDoItems };
 }

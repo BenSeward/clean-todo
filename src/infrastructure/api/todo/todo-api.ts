@@ -4,7 +4,10 @@ import { ToDoAPIInterface } from "./todo-api.dto";
 async function fetchToDoItems(): Promise<ToDoAPIInterface> {
   const res = await fetch("https://jsonplaceholder.typicode.com/todos");
 
-  return res.json();
+  const allItems = await res.json();
+  const reducedNumberOfItems = allItems.slice(0, 10);
+
+  return reducedNumberOfItems;
 }
 
 export async function formattedToDoItems(): Promise<ToDoItem[]> {

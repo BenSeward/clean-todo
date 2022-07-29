@@ -1,19 +1,26 @@
-import { createContext, useContext, useState } from "react";
-import { StoreInterface } from "../types/store.type";
-import { defaultToDoContext, useToDo } from "./todo";
+import { createContext, useContext, useEffect, useState } from "react";
+import { useToDoList } from "../services/todo/readToDoItems";
+import { useToDoListStorage } from "./todo";
 
 interface ProviderProps {
   children: JSX.Element | JSX.Element[];
 }
 
-const defaultContext: StoreInterface = {
-  ...defaultToDoContext,
-};
-
-const Context = createContext<StoreInterface>(defaultContext);
+const Context = createContext<any>(null);
 
 export function ApplicationContextProvider({ children }: ProviderProps) {
-  const [toDoItems, setToDoItems] = useToDo();
+  const [toDoItems, setToDoItems] = useState();
+  const { retreiveInitialToDoItems } = useToDoList();
+
+  useEffect(() => {
+    function initializeAsyncContext() {
+      if (!toDoItems) {
+        retreiveInitialToDoItems().then((res) => setToDoItems(res as any));
+      }
+    }
+
+    initializeAsyncContext();
+  }, [toDoItems, retreiveInitialToDoItems]);
 
   const values = {
     toDoItems,
