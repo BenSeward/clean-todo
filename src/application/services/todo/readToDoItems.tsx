@@ -1,4 +1,4 @@
-import { formattedToDoItems } from "../../../infrastructure/api/todo/todo-api";
+import { mappedToDoItems } from "../../../infrastructure/api/todo/todo-api.mapper";
 import { useToDoListStorage } from "../../store/todo";
 
 export function useToDoList() {
@@ -7,7 +7,7 @@ export function useToDoList() {
   async function retreiveInitialToDoItems() {
     if (storage) return;
 
-    const formattedItems = await formattedToDoItems();
+    const formattedItems = await mappedToDoItems();
     return formattedItems;
   }
 
