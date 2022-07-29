@@ -11,6 +11,12 @@ export function useToDoList() {
     return formattedItems;
   }
 
+  const getToDoItems = storage?.toDoItems || [];
+
+  function getToDoItem(idToFind: string) {
+    return storage.toDoItems.find((item) => item.id === idToFind) || [];
+  }
+
   function createToDoItem() {
     const newItem = {
       id: Math.random().toString(),
@@ -20,7 +26,26 @@ export function useToDoList() {
     storage.setToDoItems([...storage.toDoItems, newItem]);
   }
 
-  const getToDoItems = storage?.toDoItems || [];
+  function updateToDoItem(id: string, value: string) {
+    if (!storage) return;
 
-  return { retreiveInitialToDoItems, getToDoItems, createToDoItem };
+    const updatedItems = storage.toDoItems.map((item) => {
+      if (item.id !== id) return item;
+
+      return {
+        ...item,
+        label: value,
+      };
+    });
+
+    return storage.setToDoItems(updatedItems);
+  }
+
+  return {
+    retreiveInitialToDoItems,
+    getToDoItems,
+    createToDoItem,
+    updateToDoItem,
+    getToDoItem,
+  };
 }
