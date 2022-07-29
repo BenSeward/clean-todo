@@ -20,13 +20,14 @@ export function useToDoList() {
   function createToDoItem() {
     const newItem = {
       id: Math.random().toString(),
-      label: "another label",
+      label: "",
+      completed: false,
     };
 
     storage.setToDoItems([...storage.toDoItems, newItem]);
   }
 
-  function updateToDoItem(id: string, value: string) {
+  function updateToDoItem(id: string, value: string, completed: boolean) {
     if (!storage) return;
 
     const updatedItems = storage.toDoItems.map((item) => {
@@ -34,6 +35,7 @@ export function useToDoList() {
 
       return {
         ...item,
+        completed,
         label: value,
       };
     });

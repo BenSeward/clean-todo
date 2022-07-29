@@ -1,20 +1,20 @@
-import React from "react";
+import React, { InputHTMLAttributes } from "react";
 import styles from "./Input.module.scss";
 
-type InputProps = {
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
   id: string;
   value: string;
-  onChange: (value: string) => void;
-};
+}
 
-export function Input({ id, value, onChange }: InputProps) {
+export function Input({ id, value, onChange, ...rest }: Props) {
   return (
     <input
       id={id}
       className={styles.input}
       type={"text"}
       value={value}
-      onChange={(event) => onChange(event.target.value)}
+      onChange={onChange}
+      {...rest}
     />
   );
 }

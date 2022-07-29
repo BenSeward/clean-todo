@@ -8,6 +8,7 @@ export async function mappedToDoItems(): Promise<ToDoItem[]> {
     return {
       id: item.id.toString(),
       label: item.title,
+      completed: item.completed,
     };
   });
 }
