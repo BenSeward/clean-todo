@@ -1,6 +1,6 @@
 import React from "react";
 import { ToDoItem } from "../../application/types/todo.type";
-import { Input } from "../shared/Input";
+import { Input } from "../shared/Checkbox";
 
 export function ToDoListItem({ id, label }: ToDoItem) {
   return (

@@ -1,10 +1,10 @@
 import React from "react";
 
-type InputProps = {
+type CheckboxProps = {
   id: string;
   type: string;
 };
 
-export function Input({ id, type }: InputProps) {
+export function Checkbox({ id, type }: CheckboxProps) {
   return <input id={id} type={type} />;
 }
