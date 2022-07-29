@@ -1,6 +1,6 @@
 import React from "react";
 import { useToDoList } from "../../application/services/todo/useToDoList";
-import { useToDoListStorage } from "../../application/store/todo";
+import { Button } from "../shared/Button";
 import { ToDoListItem } from "./ToDoListItem";
 
 export function ToDoList() {
@@ -12,7 +12,7 @@ export function ToDoList() {
         <ToDoListItem key={index} id={item.id} label={item.label} />
       ))}
 
-      <button onClick={createToDoItem}>Create a new item</button>
+      <Button onClick={createToDoItem}>ADD ITEM</Button>
     </div>
   );
 }

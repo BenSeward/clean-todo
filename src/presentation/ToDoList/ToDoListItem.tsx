@@ -8,6 +8,8 @@ import styles from "./ToDoList.module.scss";
 export function ToDoListItem({ id, label }: ToDoItem) {
   const { getToDoItem, updateToDoItem } = useToDoList();
 
+  console.log("hello");
+
   return (
     <div className={styles.todoItem}>
       <label htmlFor={`${id}`}>

@@ -1,4 +1,4 @@
-import "../../styles/globals.css";
+import "../presentation/shared/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ApplicationContextProvider } from "../application/store";
 
