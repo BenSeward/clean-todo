@@ -14,6 +14,10 @@ function Home(): JSX.Element {
 
       <Container>
         <h1>Tasks</h1>
+        <h4>
+          This is a simple tasks app to demonstrate CLEAN architecture in a
+          React environment.
+        </h4>
         <ToDoList />
       </Container>
     </div>

@@ -20,7 +20,7 @@ export function useToDoList() {
   function createToDoItem() {
     const newItem = {
       id: Math.random().toString(),
-      label: "",
+      label: "New todo item",
       completed: false,
     };
 
