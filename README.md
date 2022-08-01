@@ -1,6 +1,6 @@
 # CLEAN React Architecture ⚛️ ⚙️
 
-⚠️ Please note: This is a work in progress, feel free to submit a PR if you have anything to add!
+⚠️ Please note: This is a work in progress, and I am still learning about this pattern. Feel free to submit a PR if you have anything to add!
 
 ## Introduction
 
