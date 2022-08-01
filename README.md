@@ -16,8 +16,8 @@ This is not supposed to be a template, boilerplate or a framework. It is an opin
 
 ## Table of Contents
 
-- [💻 Application Overview](docs/application-overview.md)
-- [🗄 Project Structure](docs/project-structure.md)
+- [💻 Application Overview](src/docs/application-overview.md)
+- [🗄 Project Structure](src/docs/project-structure.md)
 
 ## Getting Started
 
