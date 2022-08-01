@@ -16,20 +16,10 @@ This is not supposed to be a template, boilerplate or a framework. It is an opin
 
 - [💻 Application Overview](docs/application-overview.md)
 - [🗄 Project Structure](docs/project-structure.md)
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `src/pages/index.tsx`. The page auto-updates as you edit the file.
+  - [🎨 Presentation Layer](src/presentation/readme.md)
+  - [💻 Application Layer](src/application/readme.md)
+  - [📡 Infrastructure Layer](src/infrastructure/readme.md)
+- [📚 Useful Reading](docs/useful-reading.md)
 
 ## Contributing
 

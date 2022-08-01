@@ -16,7 +16,6 @@ This separation is intentional since it allows relevant logic to be contained ex
 └── /src
     ├── /pages
     ├── /assets
-    ├── /docs
     ├── /presentation
     |   ├── /module1
     |   |   ├── /index.ts
