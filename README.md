@@ -8,7 +8,7 @@ The main goal for this application is to make a modular application where you ca
 
 Take a look around the repo and check out how I have structured it.
 
-⚠️ Note: Please note this is a work in progress, feel free to submit a PR if you have anything to add!
+⚠️ Please note: This is a work in progress, feel free to submit a PR if you have anything to add!
 
 #### Disclaimer:
 
