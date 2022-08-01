@@ -6,9 +6,7 @@
 
 This is a boilerplate repository demonstrating CLEAN architecture in a Next.JS app. This is my attempt at making a future-proof todo app that is easily extensible and loosely follows CLEAN principles.
 
-The main goal for this application is to make a modular application where you can easily swap out dependencies without much friction.
-
-Take a look around the repo and check out how I have structured it.
+The main goal for this application is to make a modular application where you can easily swap out dependencies without much friction. Take a look around the repo and check out how I have structured it.
 
 #### Disclaimer:
 
