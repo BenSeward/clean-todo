@@ -17,7 +17,7 @@ This is not supposed to be a template, boilerplate or a framework. It is an opin
 - [💻 Application Overview](docs/application-overview.md)
 - [🗄 Project Structure](docs/project-structure.md)
   - [🎨 Presentation Layer](src/presentation/readme.md)
-  - [💻 Application Layer](src/application/readme.md)
+  - [⚙️ Application Layer](src/application/readme.md)
   - [📡 Infrastructure Layer](src/infrastructure/readme.md)
 - [📚 Useful Reading](docs/useful-reading.md)
 
