@@ -15,7 +15,9 @@ The Services folder contains functions or classes made to bring calculations on 
 
 ### Store
 
-This is where the state management and data is held. There is a core `store.tsx` file which references multiple sub directories for specific data structures used throughout the project (todo store, user store etc.) This is the central repository for all of your applications state.
+This is where the state management and data is held. For our examnple we happen to be using React Context, however this could be swapped out for Redux, Zustand or any other state management tool.
+
+There is a core `store.tsx` file which references multiple sub directories for specific data structures used throughout the project (todo store, user store etc.) This is the central repository for all of your applications state.
 
 ### Types
 
