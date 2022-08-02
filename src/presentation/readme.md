@@ -8,18 +8,15 @@ This layer reads from the application layer, and should never have any dependenc
 ├── /presentation
     ├── /pages
     ├── /module1
-    |   ├── /pages
-    |   ├── /components
-    |   ├── /context
-    |   └── /hooks
+    |   ├── /index.ts
+    |   ├── /Component.tsx
+    |   └── /Component.module.scss
     ├── /module2
-    |   ├── /pages
-    |   ├── /components
-    |   ├── /context
-    |   └── /hooks
+    |   ├── /index.ts
+    |   ├── /Component.tsx
+    |   └── /Component.module.scss
     └── /shared
-        ├── /components
-        ├── /context
-        ├── /hooks
-        └── /utils
+        ├── /module3
+        ├── /module4
+        └── /styles
 ```
